@@ -28,6 +28,8 @@ def decode_querystring_value(val):
 def encode_query(qstring):
     if hasattr(qstring, "query"):
         return encode_query(qstring.query)
+    if qstring == "":
+        return ""
     if isinstance(qstring, str):
         return "?" + qstring
     if isinstance(qstring, dict):
