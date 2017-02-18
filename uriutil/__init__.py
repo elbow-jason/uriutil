@@ -97,9 +97,6 @@ class Uri(object):
         self.path = decode_path(parts.path.split("/"))
         self.fragment = decode_path(parts.fragment.split("/"))
 
-    def put_query(key, value):
-        self.query[str(key)] = str(value)
-
     def __str__(self):
         parts = dict(
             scheme=encode_scheme(self),
@@ -110,7 +107,7 @@ class Uri(object):
             query=encode_query(self),
             fragment=encode_fragment(self),
         )
-        tmp = "{scheme}{upass}{host}{path}{port}{query}{fragment}"
+        tmp = "{scheme}{upass}{host}{port}{path}{query}{fragment}"
         return tmp.format(**parts)
 
     def __repr__(self):
