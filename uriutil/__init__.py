@@ -39,6 +39,8 @@ def encode_query(qstring):
             pair = "{key}={val}".format(key=key, val=value_string)
             pairs.append(pair)
         joined = "&".join(pairs)
+        if joined == "" or joined is None:
+            return ""
         return "?" + joined
     return ""
 

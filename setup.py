@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'uriutil',
   packages = ['uriutil'],
-  version = '0.1.3',
+  version = '0.1.5',
   description = 'A mediocre URI parsing lib',
   author = 'Jason Goldberger',
   author_email = 'jasongoldberger@gmail.com',
