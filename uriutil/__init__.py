@@ -97,6 +97,8 @@ class Uri(object):
         self.path = decode_path(parts.path.split("/"))
         self.fragment = decode_path(parts.fragment.split("/"))
 
+    def put_query(key, value):
+        self.query[str(key)] = str(value)
 
     def __str__(self):
         parts = dict(
